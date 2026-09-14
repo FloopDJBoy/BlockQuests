@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_main"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <!-- TITLE -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LEVEL COMPLETE"
+        android:textColor="@color/primary_action"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <!-- CARD -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#252526"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <!-- YOUR MOVES -->
+        <TextView
+            android:id="@+id/movesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your moves: 120"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:paddingBottom="6dp"/>
+
+        <!-- BEST -->
+        <TextView
+            android:id="@+id/bestText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Best: 110"
+            android:textColor="#B0B0B0"
+            android:textSize="14sp"
+            android:paddingBottom="10dp"/>
+
+        <!-- NEW RECORD -->
+        <TextView
+            android:id="@+id/recordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEW RECORD!"
+            android:textColor="@color/primary_action"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:visibility="gone"
+            android:paddingBottom="10dp"/>
+
+        <!-- LIKE / DISLIKE SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/likeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👍 Like"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_action"
+                android:backgroundTint="#3C3C3C"
+                android:layout_marginEnd="6dp"/>
+
+            <Button
+                android:id="@+id/dislikeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="👎 Dislike"
+                android:textAllCaps="false"
+                android:textColor="#B0B0B0"
+                android:backgroundTint="#3C3C3C"
+                android:layout_marginStart="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- NEXT BUTTON -->
+    <Button
+        android:id="@+id/nextBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="@color/primary_action"
+        android:layout_marginTop="14dp"/>
+
+</LinearLayout>

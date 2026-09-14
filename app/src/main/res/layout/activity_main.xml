@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FloopDJBoy.floopdjboy.blockquest.Profiler.ProfilingConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:padding="0dp"
+    android:layout_height="match_parent"
+    android:background="@color/bg_main"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Stage"
+        android:layout_width="360dp"
+        android:layout_height="270dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/paletteHolder" />
+
+
+    <LinearLayout
+        android:id="@+id/paletteHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="374dp"
+        android:layout_margin="0dp"
+        android:padding="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryBar"
+            android:layout_width="wrap_content"
+            android:layout_margin="0dp"
+
+            android:padding="0dp"
+            android:background="#111"
+            android:foreground="@drawable/tile_border"
+            android:foregroundTint="#343434"
+            android:layout_height="match_parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/blockPalette"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:background="#111"
+            android:foreground="@drawable/tile_border"
+            android:foregroundTint="#343434"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryBarActors"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:background="#111"
+            android:foreground="@drawable/tile_border"
+            android:foregroundTint="#343434"
+            android:layout_height="match_parent" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/actorPalette"
+            android:visibility="gone"
+            android:layout_margin="0dp"
+            android:padding="0dp"
+            android:background="#111"
+            android:foreground="@drawable/tile_border"
+            android:foregroundTint="#343434"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:foreground="@drawable/tile_border"
+        android:background="#111"
+        android:foregroundTint="#343434"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/paletteHolder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="168dp"
+            android:paddingLeft="5dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_code_category"
+                android:background="@drawable/tab_selector_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textSize="12sp"
+                android:textColor="#EEEEEE"
+                android:translationY="1dp"
+                android:layout_gravity="bottom"
+                android:singleLine="true"
+                android:ellipsize="none"
+                app:backgroundTint="@null"
+                android:drawableLeft="@drawable/btn_code"
+                android:gravity="center_vertical|start"
+                android:text="code" />
+
+            <Button
+                android:id="@+id/btn_actors_category"
+                android:background="@drawable/tab_selector_layout"
+                android:minHeight="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_marginBottom="0dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="0dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:textSize="12sp"
+                android:textColor="#EEEEEE"
+                android:translationY="1dp"
+                android:layout_marginStart="-8dp"
+                android:layout_gravity="bottom"
+                android:singleLine="true"
+                android:ellipsize="none"
+                app:backgroundTint="@null"
+                android:drawableLeft="@drawable/btn_actors"
+                android:gravity="center_vertical|start"
+                android:text="Actors" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="474dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Spinner
+                android:id="@+id/mode_selector"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/save_btn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/save_icon" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/runBtn"
+                android:layout_width="24dp"
+
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/btn_go_flag" />
+
+            <ImageButton
+                android:id="@+id/pauseBtn"
+                android:layout_width="24dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/btn_pause" />
+
+            <ImageButton
+                android:id="@+id/stopBtn"
+                android:alpha="0.5"
+                android:layout_width="24dp"
+                android:layout_marginStart="10dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:layout_height="24dp"
+                app:srcCompat="@drawable/btn_stop" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="129dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/backBtn"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/arrow_back" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/activeActorImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toStartOf="@+id/Stage"
+        app:layout_constraintTop_toBottomOf="@+id/topBar"
+        app:srcCompat="@android:drawable/alert_light_frame" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/Stage"
+        app:layout_constraintTop_toBottomOf="@+id/Stage">
+
+
+        <LinearLayout
+            android:id="@+id/underStageArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"></LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layoutDirection="rtl"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/playBtn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:background="@drawable/btn_play_level"
+                android:padding="0dp"
+                android:text="enter play mode"
+                android:textAllCaps="true"
+                android:textColor="#EAEAEA"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/dragOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="false"
+        android:elevation="999999dp"
+        android:focusable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+
+</FloopDJBoy.floopdjboy.blockquest.Profiler.ProfilingConstraintLayout>

@@ -1,0 +1,23 @@
+{
+  "height": 9,
+  "spriteGroups": {
+    "2131230845": {
+      "actors": {
+        "75ecb136-8e59-4f58-b8af-6122b987727e": {
+          "direction": 3,
+          "id": "75ecb136-8e59-4f58-b8af-6122b987727e",
+          "sprite": 2131230845,
+          "tags": [
+            0
+          ],
+          "x": 0,
+          "y": 0
+        }
+      },
+      "blocks": {},
+      "rootBlocks": [],
+      "sprite": 2131230845
+    }
+  },
+  "width": 12
+}

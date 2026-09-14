@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="60dp"
+    android:layout_height="45dp"
+    android:id="@+id/categoryLayout"
+    android:background="#111"
+    android:gravity="center_vertical">
+
+    <View
+        android:id="@+id/colorBubble"
+        android:layout_gravity="center"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/category_circle"/>
+
+    <TextView
+        android:id="@+id/categoryLabel"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motion"
+        android:textSize="10.4sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>
